@@ -13,8 +13,12 @@ async def recipies_index():
 
 @roomate_api.get("/recipes/{recipe_id}")
 async def recipies_show(recipe_id: str):
-    return {"recipes": recipe_id}
+    return {"recipe": recipe_id}
 
 @roomate_api.get("/shopping_list")
 async def shopping_list_index():
-    return {"shopping_list": []}
+    return {"shopping_lists": []}
+
+@roomate_api.get("/shopping_list/{shopping_list_id}")
+async def shopping_list_show(shopping_list_id: str):
+    return {"shopping_list": shopping_list_id}
