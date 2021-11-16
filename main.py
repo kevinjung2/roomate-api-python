@@ -6,3 +6,7 @@ roomate_api = FastAPI()
 @roomate_api.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@roomate_api.get("/recipes")
+async def recipies_index():
+    return {"recipes": []}
